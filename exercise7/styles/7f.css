@@ -1,0 +1,32 @@
+p {
+  font-family: Arial;
+}
+#what_to_type {
+  font-size: 11px;
+  color: gray;
+  margin-bottom: 7px;
+}
+
+.email {
+  width: 250px;
+  padding: 5px;
+  border: 1.5px solid gray;
+  border-radius: 5px;
+  margin-bottom: 7px;
+}
+
+#policy {
+  font-size: 11px;
+  color: gray;
+  
+}
+
+#agree_join {
+  width: 250px;
+  padding: 11px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(0, 106, 255);
+  color: white;
+}

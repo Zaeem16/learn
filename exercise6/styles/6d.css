@@ -1,0 +1,15 @@
+.title {
+  font-size: 35px;
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.order {
+  font-family: Montserrat;
+  text-align: center;
+}
+
+#feature {
+  text-decoration: underline;
+}

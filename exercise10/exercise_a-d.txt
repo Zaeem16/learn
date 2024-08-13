@@ -1,0 +1,1 @@
+We draw the layouts of the provided photos in vertical and horizontal boxes using google drawing.

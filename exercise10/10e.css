@@ -1,0 +1,38 @@
+.cat1, .cat2, .cat3 {
+  font-family: Arial;
+  box-shadow: 0px 0px 5px rgba(81, 80, 80, 0.47);
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.cat1-image, .cat2-image, .cat3-image {
+  width: 130px;
+  height: 140px;
+  border: none; 
+}
+
+.cat1-info, .cat2-info, .cat3-info {
+  padding: 5px;
+  line-height: 5px;
+}
+
+.cat1-name, .cat2-name, .cat3-name{
+  margin-top: 3px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.mutual1-friends, .mutual2-friends, .mutual3-friends {
+  font-size: 12px;
+  color: gray;
+}
+
+.add1_friend, .add2_friend, .add3_friend {
+  color: white;
+  background-color: rgba(0, 128, 255, 0.901);
+  border: none;
+  padding: 5px 15px;
+  border-radius: 3px;
+  font-size: 11px;
+  cursor: pointer;
+}

@@ -1,0 +1,34 @@
+#request {
+  font-family: Arial;
+  font-size: 32px;
+}
+
+#pickup_location,
+#destination {
+  padding: 10px;
+  display: block;
+  background-color: rgba(225, 224, 224, 0.581) ;
+  border: none;
+  width: 300px;
+}
+
+#pickup_location {
+  margin-bottom: 5px;
+}
+
+#destination {
+  margin-bottom: 30px;
+}
+
+#Uber_request,
+#schedule {
+  padding: 12px 17px;
+  font-size: 14px;
+  cursor: pointer;
+  border-style: none;
+}
+#Uber_request {
+  background-color: black;
+  color: white;
+  margin-right: 15px;
+}
