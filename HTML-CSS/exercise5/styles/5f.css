@@ -1,0 +1,23 @@
+p {
+  font-family: Arial;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.price {
+  font-size: 30px;
+}
+
+#type {
+  font-size: 15px;
+  color: gray;
+}
+.today_info {
+  color: green;
+}
+.after_hours {
+  color: gray;
+}
+#rate {
+  color: rgb(248, 78, 40);
+}

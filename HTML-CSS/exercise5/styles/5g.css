@@ -1,0 +1,25 @@
+p {
+  font-family: Arial;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 17px;
+}
+.course_name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#reference {
+  color: gray;
+  font-weight: lighter;
+}
+.advice {
+  font-size: 12px;
+  width: 400px;
+}
+.top_skills {
+  font-size: 12px;
+  margin-top: 15px;
+}
+.research {
+  color: rgb(40, 154, 215);
+}

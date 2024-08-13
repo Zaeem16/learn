@@ -1,0 +1,22 @@
+p {
+  font-family: Arial;
+  margin-top: 0px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.question {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.help {
+  font-size: 20px;
+}
+.learn_more {
+  font-size: 15px;
+  color: blue;
+  cursor: pointer;
+}
+.learn_more:hover {
+  text-decoration: underline;
+}

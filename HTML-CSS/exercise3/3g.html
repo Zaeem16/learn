@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>basic e-commerce</title>
+    <style>
+      #amazon_link {
+        color: rgb(0, 113, 113);
+      }
+
+      #amazon_link:hover {
+        color: rgb(255, 158, 55);
+        cursor: pointer;
+      }
+
+      #product_name, #price {
+        font-weight: bold;
+      }
+      #product_name {
+        font-size: 30px;
+      }
+      
+      #price {
+        color: rgb(0, 118, 0);
+      }
+
+      button {
+        height: 37px;
+        width: 120px;
+        border-radius: 20px;
+        border-width: 0cm;
+        cursor: pointer;
+      }
+
+      button:active {
+        opacity: 0.7;
+      }
+
+      #add_to_cart:hover {
+        background-color: rgb(224, 176, 17);
+        cursor: pointer;
+      }
+
+      #buy_now:hover {
+        background-color: rgb(225, 145, 25);
+        cursor: pointer;
+      }
+      #add_to_cart {
+        background-color: rgb(255, 216, 20);
+        margin-right: 10px;
+      }
+
+      #buy_now {
+        background-color: rgb(255, 165, 28);
+      }
+    </style>
+  </head>
+    
+  <body>
+    <div>
+      <a id="amazon_link" href="https://www.amazon.com/" target="_top">Back to amazon</a>
+      <p id="product_name">Nike Black Running Shoes</p>
+      <p id="price">$39 - in stock</p>
+      <p id="delivery_amount_time">Free delivery tomorrow</p> 
+    </div>
+
+      <div id="buttons">
+        <button id="add_to_cart">Add to cart</button>
+        <button id="buy_now">Buy now</button>
+      </div>
+    </body>
+</html>

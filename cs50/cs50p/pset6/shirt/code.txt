@@ -1,0 +1,55 @@
+import sys
+import os
+from PIL import Image, ImageOps
+
+# Check if the number of command-line arguments is exactly 3
+# (the first argument is the script name itself)
+# Exit with an error if the number of arguments is incorrect.
+if len(sys.argv) < 3:
+    sys.exit("Too few command-line arguments")
+elif len(sys.argv) > 3:
+    sys.exit("Too many command-line arguments")
+# Extract the input and output filenames from the command-line arguments
+else:
+    path_1 = os.path.splitext(sys.argv[1])
+    path_2 = os.path.splitext(sys.argv[2])
+# Exit with an error if any filename does not match the required extensions.
+Valid_types = [".jpg", ".jpeg", ".png"]
+if not path_1[1].lower() in tuple(Valid_types):
+    sys.exit(f"{sys.argv[1]} is not a valid extension")
+elif not path_2[1].lower() in tuple(Valid_types):
+    sys.exit(f"{sys.argv[2]} is not a valid extension")
+# Check if both filenames end with .jpg, .jpeg, or .png (case insensitive)
+if path_1[1] != path_2[1]:
+    sys.exit(f"{path_1[1]} is not the same valid extension as {path_2[1]}")
+
+
+
+# Check if the input file exists
+# Exit with an error if the input file does not exist.
+flag = False
+if os.path.exists(sys.argv[1]):
+    flag = True
+if flag is True:
+    pass
+else:
+    sys.exit(f"file:{sys.argv[1]} is not found")
+
+try:
+    # Open the input image using Image.open
+    shirt = Image.open("shirt.png")
+    with Image.open(sys.argv[2]) as im:
+        # Resize and crop the input image to the size of the shirt image using ImageOps.fit
+        photo = ImageOps.fit(im, size=(600, 600))
+        # Overlay the shirt image on the resized and cropped input image using Image.paste
+        photo.paste(shirt, shirt)
+        # Save the resulting image to the output filename using Image.save
+        photo.save(sys.argv[2])
+    # Catch any exceptions that may occur during file operations or image processing
+    # Print an error message and exit with an appropriate exit code.
+except FileNotFoundError:
+    sys.exit("The intended file not found")
+    # If all operations succeed without errors, the program will exit normally.
+
+
+
