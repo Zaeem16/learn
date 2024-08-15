@@ -4,15 +4,29 @@
     <title>columns</title>
     <style>
       .grid_container {
-        background-color: pink;
-        padding: 20px;
+        display: grid;
+        grid-template-columns: 50px 1fr 75px;
+
+      }
+
+      .col1 {
+        background-color: lightblue;
+      }
+
+      .col2 {
+        background-color: lightpink;
+      }
+
+      .col3 {
+        background-color: lightblue;
       }
     </style>
   </head>
   <body>
     <div class="grid_container">
-      <p>hello</p>
-      <button>hello</button>
+      <div class="col1">col1</div>
+      <div class="col2">col2</div>
+      <div class="col3">col3</div>
     </div>
   </body>
 </html>
