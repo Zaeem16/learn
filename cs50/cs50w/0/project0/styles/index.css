@@ -1,0 +1,17 @@
+body {
+  display: grid;
+  grid-template-columns: 100px 100px;
+
+}
+
+form {
+  background-color: black;
+  justify-self: center;
+  align-self: center;
+
+}
+
+#search, #search-button {
+  vertical-align: center;
+  background-color: lightblue;
+}
