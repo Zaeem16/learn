@@ -1,0 +1,70 @@
+p {
+  margin-top: 0px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: small;
+  margin-bottom: 3px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 130px 130px 130px;
+  grid-column-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  width: fit-content;
+
+}
+.cat1, .cat2, .cat3{
+  box-shadow: 0px 0px 5px rgba(81, 80, 80, 0.47);
+  width: fit-content;
+}
+
+.cat1-info, .cat2-info, .cat3-info {
+  padding: 5px;
+  height: 70px;
+  align-items: center;
+}
+
+
+
+.cat1-image, .cat2-image, .cat3-image {
+  width: 130px;
+  height: 140px;
+}
+
+.mutuals1, .mutuals2, .mutuals3 {
+  display: grid;
+  grid-template-columns: 10px 30px;
+  grid-gap: 10px;
+
+}
+.mutual-friends1, .mutual-friends2, .mutual-friends3 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  margin-bottom: 5px;
+}
+
+.mutual-friends-count1,
+.mutual-friends-count2,
+.mutual-friends-count3 {
+  font-size: 10px;
+  color: gray;
+  height:10px;
+  width:max-content;
+  text-align: left;
+  align-items: center;
+  font-weight: lighter;
+  padding: 5px;
+}
+
+.add-friend1, .add-friend2, .add-friend3 {
+  color: white;
+  background-color: rgba(0, 128, 255, 0.901);
+  border: none;
+  padding: 7px 15px;
+  border-radius: 3px;
+  font-size: 11px;
+  cursor: pointer;
+}
