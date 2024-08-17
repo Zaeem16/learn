@@ -1,0 +1,32 @@
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 350px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    align-items: center;
+
+}
+
+p {
+    font-family: Arial;
+    margin: 10px;
+    margin: 10px;
+}
+
+.number-reminder > p {
+    background-color: rgb(20, 92, 192);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+}
+
+.task > p {
+    margin: 15px;
+}
+
