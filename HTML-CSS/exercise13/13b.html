@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice nested flexbox 2</title>
+    <style>
+      .div2-2 > p {
+        background-color: black;
+        color: white;
+      }
+
+      p {
+        margin: 0;
+        padding: 3px 2px;
+      }
+      .div {
+        display: flex;
+        border: none;
+      }
+
+      .div1 {
+        background-color: lightpink;
+        width: 100px;
+        height: 70px;        
+      }
+
+      .div2 {
+        background-color: lightblue;
+        width: 200px;
+      }
+
+      .div2-2 {
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="div">
+      <div class="div1"></div>
+      <div class="div2">
+        <p>row 1</p>
+        <div class="div2-2">
+          <p> row2</p>
+          <p>row2</p>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
