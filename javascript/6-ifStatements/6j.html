@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>generate a random num between 0 and 1</title>
+  </head>
+  <body>
+    <script>
+      const randFloat = Math.random();
+      let compGuess = "";
+      const guess = "Tails";
+
+      randFloat < 0.5 ? compGuess = "Tails" : compGuess = "Heads";
+
+      console.log(`Computer guess: ${compGuess}`);
+
+      compGuess === guess ? console.log("You win!") : console.log("You lose!");
+      
+
+    </script>
+  </body>
+</html>

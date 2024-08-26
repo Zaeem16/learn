@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>compare price of objects</title>
+  </head>
+  <body>
+    <h1>To the console</h1>
+    <script>
+      product1 = {
+        name: "Basketball",
+        price: 2095
+      }
+
+      product2 = {
+        name: "pot",
+        price: 1500
+      }
+
+      function compare(product1, product2) {
+        if (product1.price > product2.price) {
+          return product2.name;
+        }
+        else if (product1.price < product2.price) {
+          return product1.name;
+        }
+      }
+
+      function isSameProduct(product1, product2) {
+        if (product1.price == product2.price && product1.name == product2.name) {
+          return true;
+        }
+        return false;
+      }
+
+
+      const cheaper = compare(product1, product2);
+      console.log(`The cheaper product is: ${cheaper}`);
+
+      const sameProduct = isSameProduct(product1, product2);
+      console.log(`Are they the same product? ${sameProduct}`);
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>convert length including feet and error check</title>
+  </head>
+  <body>
+    <script>
+      function convertLength(length, from, to) {
+        if (from === "km" && to === "miles") {
+          const kmToMilesFormula = length / 1.6;
+          return kmToMilesFormula + " " + to;
+        } 
+        else if (from === "miles" && to === "km") {
+            const milesToKmFormula = length * 1.6;
+            return milesToKmFormula + " " + to;
+        }
+        else if ((from === "km" || from === "miles") && to === "ft") {
+          if (from === "km") {
+            const kmToFtFormula = length * 1000 * 3.281;
+            return kmToFtFormula + " " + to;
+          } 
+          else {
+            const milesToFtFormula = length * 5280;
+            return milesToFtFormula + " " + to;
+          }
+          
+        }
+        else if (from === to) 
+          return length + " " + from;
+        
+        else 
+          return `Invalid conversion "${from}" to "${to}"`;
+        
+      }
+
+      console.log(convertLength(10, "km", "good"));
+    </script>
+  </body>
+</html>

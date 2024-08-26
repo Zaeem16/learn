@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>head and tails with score object</title>
+  </head>
+  <body>
+    <button onclick="
+      playGame('heads');
+      updateScore();
+      ">heads</button>
+
+    <button onclick="
+      playGame('tails');
+      updateScore();
+      ">tails</button>
+
+    <button onclick="
+      clearScoreHistory();
+    ">Clear Score</button>
+  
+    <script>
+
+      let scoreHistory = localStorage.getItem('myScoreKey');
+      if (scoreHistory === null) {
+        scoreHistory = { wins: 0, losses: 0 };
+      } else {
+        scoreHistory = JSON.parse(scoreHistory);
+      }
+      
+      let compGuess = "";
+      let userGuess = "";
+      const won = "You win!";
+      const lost = "You lose";
+      let message = "";
+
+      function playGame(guess) {
+        const randFloat = Math.random();
+        
+        guess === "heads" ? userGuess = "heads" : userGuess = "tails";
+
+        randFloat < 0.5 ? compGuess = "tails" : compGuess = "heads";
+        compGuess === userGuess ? message = won : message = lost;
+        console.log(userGuess, compGuess);
+
+      }
+
+      function updateScore() {
+        if (message === won) {
+          scoreHistory.wins += 1;
+        } else if (message === lost) {
+          scoreHistory.losses += 1;
+        }
+        console.log(`Score: wins:${ scoreHistory.wins}, losses: ${ scoreHistory.losses}`)
+        localStorage.setItem("myScoreKey", JSON.stringify(scoreHistory));
+      }
+
+      function clearScoreHistory() {
+        scoreHistory.wins = 0;
+        scoreHistory.losses = 0;
+        console.log("Score history cleared")
+        console.log(`Score: wins: ${ scoreHistory.wins}, losses: ${ scoreHistory.losses})`)
+      }
+
+      
+
+      
+
+    </script>
+  </body>
+</html>

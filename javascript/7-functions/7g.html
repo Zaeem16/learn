@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>convert length</title>
+  </head>
+  <body>
+    <script>
+      function convertLength(length, from, to) {
+        if (from === "km" && to === "miles") {
+          const kmToMilesFormula = length / 1.6;
+          return kmToMilesFormula + " " + to;
+        } else if (from === "miles" && to === "km") {
+            const milesToKmFormula = length * 1.6;
+            return milesToKmFormula + " " + to;
+        } else if (from === to) {
+          return length + " " + from;
+        }
+      }
+
+      console.log(convertLength(10, "miles", "km"));
+    </script>
+  </body>
+</html>

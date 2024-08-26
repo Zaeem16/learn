@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>convert temperature</title>
+  </head>
+  <body>
+    <script>
+      function convertTemperature(degrees, unit) {
+        if (unit === "C" || unit === "Celsius") {
+          const formulaToFahrenheit = (degrees * 9) / 5 + 32;
+          return `${formulaToFahrenheit}F`;
+        } else if (unit === "F" || unit === "Fahrenheit") {
+          const formulaToCelsius = (degrees - 32) * 5 / 9;
+          return `${formulaToCelsius}C`;
+        }
+      }
+
+      console.log(convertTemperature(86, "F"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>generate a random num between 0 and 1</title>
+  </head>
+  <body>
+    <script>
+      const randFloat = Math.random();
+      let result = "";
+      const guess = "Tails";
+
+      if (randFloat < 0.5) {
+        result = "Tails";
+      } else {
+        result = "Heads";
+      }
+
+      console.log(`Computer guess: ${result}`);
+
+      if (result === guess) {
+        console.log("You win!");
+      } else {
+        console.log("You lose!");
+      }
+      
+
+    </script>
+  </body>
+</html>

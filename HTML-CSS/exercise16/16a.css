@@ -1,0 +1,86 @@
+.container {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.229);
+    cursor: pointer;
+}
+
+.discount {
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    top: 10px;
+    right: 0;
+}
+
+.add-to-cart-div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 35%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-to-cart-button {
+    padding: 10px 15px;
+    border: 1px solid black;
+}
+
+#pop-up {
+    position: absolute;
+    top: 26px;
+    right: -125px;
+    background-color: rgb(0, 0, 0) ;
+    cursor: default;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+p {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+}
+
+.remaining {
+    color: red;
+}
+
+.container:hover #pop-up {
+    opacity: 1;
+}
+
+.shirt-info {
+    position: absolute;
+    bottom: auto;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    row-gap: 10px;
+    font-size: 13px;
+    opacity: 0;
+    cursor: default;
+}
+@media (min-height: 300px) {
+    .container:hover .shirt-info {
+        background-color: rgba(0, 0, 0, 0.9);
+        color: yellow;
+        transform: translateY(-10px);
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        opacity: 1;
+    }
+}
+
