@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>you choose: ?</title>
+    <body>
+      <button onclick="displayMove('heads')">heads</button>
+      <button onclick="displayMove('tails')">tails</button>
+      <p class="result"></p>
+
+
+      <script>
+
+        function displayMove(move) {
+          document.querySelector('.result').innerHTML = `You choose: ${move}`;      
+        }
+      </script>
+    </body>
+  </head>
+</html>

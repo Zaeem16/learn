@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>updated Calculator</title>
+  </head>
+  <body>
+    <p class="js-calculation"></p>
+    <p>
+      <button onclick="updateCalc(1)">1</button>
+      <button onclick="updateCalc(2)">2</button>
+      <button onclick="updateCalc(3)">3</button>
+      <button onclick="updateCalc('+')">+</button>
+    </p>
+
+    <p>
+      <button onclick="updateCalc(4)">4</button>
+      <button onclick="updateCalc(5)">5</button>
+      <button onclick="updateCalc(6)">6</button>
+      <button onclick="updateCalc('-')">-</button>
+    </p>
+
+    <p>
+      <button onclick="updateCalc(7)">7</button>
+      <button onclick="updateCalc(8)">8</button>
+      <button onclick="updateCalc(9)">9</button>
+      <button onclick="updateCalc('*')">*</button>
+    </p>
+
+    <p>
+      <button onclick="updateCalc(0)">0</button>
+      <button onclick="updateCalc(`.`)">.</button>
+      <button onclick="calcResult()">=</button>
+      <button onclick="updateCalc('/')">/</button>
+    </p>
+
+    <p>
+      <button onclick="clearCalc()">Clear</button>
+    </p>
+
+
+
+    <script>
+      
+      let calcHistory = localStorage.getItem("calculation")
+      if (calcHistory === null) {
+        calcHistory = '';
+      }
+      let calculation = '';
+      let operators = ['+', '-' , '*', '/'];
+      let calculator = document.querySelector(".js-calculation");
+      
+      function updateCalc(calc) {
+        if (operators.includes(calc)) {
+          calculation += " " + calc + " ";
+          
+      } else {
+        calculation += calc;
+      }
+        
+        calculator.innerHTML = calculation;
+      }
+        
+      
+      function calcResult() {
+        calculation = eval(calculation);
+        calculator.innerHTML = calculation;
+        localStorage.setItem("calculation", calculation);
+      }
+
+      function clearCalc() {
+        calculation = '';
+        calculator.innerHTML = calculation;
+      }
+
+      calculation = calcHistory;
+      calculator.innerHTML = calculation;
+    </script>
+  </body>
+</html>

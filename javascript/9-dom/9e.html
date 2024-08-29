@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>input</title>
+  </head>
+  <body>
+    <input class="js-text" onkeydown="submitEnter(event)">
+    <button class="submit-button" onclick="submit()">Submit</button>
+    <p class="js-result"></p>
+
+    <script>
+
+      function submit() {
+        const text = document.querySelector('.js-text').value;
+        document.querySelector('.js-result').innerHTML = `You entered: ${text}`;
+      }
+
+      function submitEnter(event) {
+        if (event.key === 'Enter') {
+          submit();
+        }
+      }
+      
+    </script>
+  </body>
+</html>

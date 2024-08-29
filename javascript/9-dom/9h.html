@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>onkeyup</title>
+  </head>
+  <body>
+    <input class="js-user-input" onkeyup="copyUserInput()">
+    <p class="js-output"></p>
+
+    <script>
+
+      function copyUserInput() {
+        const inputElement = document.querySelector('.js-user-input');
+        const outputElement = document.querySelector('.js-output');
+        outputElement.innerHTML = `You are typing: ${inputElement.value}`;
+
+      }
+    </script>
+  </body>
+</html>
