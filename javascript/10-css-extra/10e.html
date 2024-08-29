@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>gaming button</title>
+    <style>
+      .js-button-off, .js-button-on {
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 17px;
+        border-radius: 5px;
+        font-family: Arial;
+      }
+
+      .js-button-on {
+        background-color: black;
+        color: white;
+      }
+
+      .js-button-off {
+        background-color: rgb(209, 209, 209);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="js-button-off" onclick="changeMode(event)">Gaming</button>
+    <button class="js-button-off" onclick="changeMode(event)">Music</button>
+    <button class="js-button-off" onclick="changeMode(event)">tech</button>
+
+    <script>
+      let gamingButton = document.querySelector('.js-button-off')
+      function changeMode(event) {
+        let clickedButton = event.target;
+        for (let i = 0; i < clickedButton.classList.length; i++) {
+          if (gamingButton.classList.contains("js-button-off")) {
+          gamingButton.classList.remove("js-button-off");
+          gamingButton.classList.add("js-button-on");
+          console.log("on");
+          }
+          else if (gamingButton.classList.contains("js-button-on"))  {
+            gamingButton.classList.remove("js-button-on");
+            gamingButton.classList.add("js-button-off");
+            console.log("off");
+          }
+          else {
+            console.log("button not found");
+          }
+        }
+        
+      }
+    </script>
+  </body>
+</html>
