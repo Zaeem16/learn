@@ -1,0 +1,17 @@
+.js-button-off, .js-button-on {
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 5px;
+    font-family: Arial;
+  }
+
+.js-button-on {
+    background-color: black;
+    color: white;
+}
+
+.js-button-off {
+    background-color: rgb(209, 209, 209);
+}

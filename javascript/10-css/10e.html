@@ -28,26 +28,26 @@
     <button class="js-button-off" onclick="changeMode(event)">tech</button>
 
     <script>
-      let gamingButton = document.querySelector('.js-button-off')
+      
       function changeMode(event) {
-        let clickedButton = event.target;
-        for (let i = 0; i < clickedButton.classList.length; i++) {
-          if (gamingButton.classList.contains("js-button-off")) {
-          gamingButton.classList.remove("js-button-off");
-          gamingButton.classList.add("js-button-on");
-          console.log("on");
-          }
-          else if (gamingButton.classList.contains("js-button-on"))  {
-            gamingButton.classList.remove("js-button-on");
-            gamingButton.classList.add("js-button-off");
-            console.log("off");
-          }
-          else {
-            console.log("button not found");
-          }
+        let button = event.target;
+
+        if (button.classList.contains("js-button-off")) {
+        button.classList.remove("js-button-off");
+        button.classList.add("js-button-on");
+        console.log("on");
         }
-        
+        else if (button.classList.contains("js-button-on"))  {
+          button.classList.remove("js-button-on");
+          button.classList.add("js-button-off");
+          console.log("off");
+        }
+        else {
+          console.log("button not found");
+        }
       }
+        
+      
     </script>
   </body>
 </html>

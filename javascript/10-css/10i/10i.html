@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>updated Calculator</title>
+    <link rel="stylesheet" href="10i.css">
+  </head>
+  <body>
+    <div class="container">
+      <p class="js-calculation calculation"></p>
+      <div class="container-buttons">
+        <p class="first-row row">
+          <button class="number" onclick="updateCalc(1)">1</button>
+          <button class="number" onclick="updateCalc(2)">2</button>
+          <button class="number" onclick="updateCalc(3)">3</button>
+          <button class="operator" onclick="updateCalc('+')">+</button>
+        </p>
+      
+        
+    
+        <p class="second-row row">
+          <button class="number" onclick="updateCalc(4)">4</button>
+          <button class="number" onclick="updateCalc(5)">5</button>
+          <button class="number" onclick="updateCalc(6)">6</button>
+          <button class="operator" onclick="updateCalc('-')">-</button>
+        </p>
+    
+        <p class="third-row row">
+          <button class="number" onclick="updateCalc(7)">7</button>
+          <button class="number" onclick="updateCalc(8)">8</button>
+          <button class="number" onclick="updateCalc(9)">9</button>
+          <button class="operator" onclick="updateCalc('*')">*</button>
+        </p>
+    
+        <p class="fourht-row row">
+          <button class="number" onclick="updateCalc(0)">0</button>
+          <button class="number" onclick="updateCalc(`.`)">.</button>
+          <button class="number" onclick="calcResult()">=</button>
+          <button class="operator" onclick="updateCalc('/')">/</button>
+        </p>
+    
+        <p class="clear-button-container row">
+          <button class="clear-button" onclick="clearCalc()">Clear</button>
+        </p>
+      </div>
+      
+    </div>
+    
+
+
+
+    <script src="10i-script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>find min and max</title>
+  </head>
+  <body>
+    <script>
+      
+
+      function minMax(nums) {
+        let numbers = {
+          min: nums[0],
+          max: nums[0]
+        }        
+        for (let i = 0; i < nums.length; i++) {
+          if (nums[i] < numbers.min) 
+            numbers.min = nums[i];
+          
+          if (nums[i] > numbers.max) 
+            numbers.max = nums[i];
+          
+        }
+
+        return numbers;
+      }
+
+      console.log(minMax([1, 7, 9, 3, 1, 10]))
+    </script>
+  </body>
+</html>

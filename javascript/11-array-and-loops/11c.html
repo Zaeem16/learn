@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>swap values</title>
+  </head>
+  <body>
+    <script>
+      let myArray = [1, 2, 3, 4]
+      let myArray2 = ["hello","beautiful", "world"]
+      let myArray3 = [true, false, false, true, false]
+      function arraySwap(array) {
+        const lastValue = array[array.length - 1];
+        const firstValue = array[0];
+
+        array[0] = lastValue;
+        array[array.length - 1] = firstValue;
+        
+        console.log(lastValue, firstValue);
+        return array;
+        
+
+      }
+
+      console.log(arraySwap(myArray3));
+
+
+    </script>
+  </body>
+</html>

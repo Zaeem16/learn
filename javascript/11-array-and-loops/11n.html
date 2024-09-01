@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>find count</title>
+  </head>
+  <body>
+    <script>
+      
+      let array1 = ["apple", "orange", "orange", "orange", "orange", "orange", "orange", "apple"];
+
+      let count = {};
+
+      function countWords(words) {
+        for (let i = 0; i < words.length; i++) {
+          if (!(words[i] in count)) {
+            count[words[i]] = 1;
+          }
+          else {
+            count[words[i]] += 1;
+          }
+        }
+
+        return count;
+      }
+      
+      
+      console.log(countWords(array1));
+    </script>
+  </body>
+</html>

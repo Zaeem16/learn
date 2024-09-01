@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>find min and max with error handling</title>
+  </head>
+  <body>
+    <script>
+      
+
+      function minMax(nums) {
+        let numbers = {
+          min: nums[0],
+          max: nums[0]
+        }
+        if (nums.length === 0) {
+            numbers.min = null;
+            numbers.max = null;
+            return numbers;
+          }
+        else if (nums.length === 1) {
+          numbers.min = nums[0];
+          numbers.max = nums[0]
+          return numbers;
+        }
+        for (let i = 0; i < nums.length; i++) {
+          if (nums[i] < numbers.min) 
+            numbers.min = nums[i];
+          
+          if (nums[i] > numbers.max) 
+            numbers.max = nums[i];
+          
+        }
+
+        return numbers;
+      }
+
+      console.log(minMax([2]))
+    </script>
+  </body>
+</html>
