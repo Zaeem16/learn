@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>search find index</title>
+  </head>
+  <body>
+
+    <h1>Searching for "search" in an array</h1>
+    <script>
+
+      let array1 = ["egg", "apple", "egg", "egg", "ham"];
+
+      function removeEgg(foods) {
+        foods = foods.slice().reverse();
+        let foodsCopy = [];
+        let removeNum = 2;
+        for (let i = 0; i < foods.length; i++) {
+          if (foods[i].toLowerCase() === "egg" && removeNum > 0) {
+            removeNum--;
+            continue;
+          }
+
+          foodsCopy.push(foods[i]);
+        }
+
+        return foodsCopy.reverse();
+      }
+
+      console.log(removeEgg(array1));
+      console.log(array1)
+    </script>
+  </body>
+</html>

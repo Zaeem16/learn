@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>search "search"</title>
+  </head>
+  <body>
+
+    <h1>Searching for "search" in an array</h1>
+    <script>
+
+      let array1 = ["hello", "world", "goodbye", "yes", "search"];
+
+
+      function search(name) {
+        for (let i = 0; i < name.length; i++) {
+          if (name[i] === "search") {
+            return i;
+          }
+        }
+      }
+        
+      console.log(search(array1)); 
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>search find index</title>
+  </head>
+  <body>
+
+    <h1>Searching for "search" in an array</h1>
+    <script>
+
+      let array1 = ["hello", "world", "goodbye", "yes", "search", "search", "egg", "egg", "egg"];
+
+      function removeEgg(foods) {
+        let foodsCopy = [];
+        let removeNum = 2;
+        for (let i = 0; i < foods.length; i++) {
+          if (foods[i].toLowerCase() === "egg" && removeNum > 0) {
+            removeNum--;
+            continue;
+          }
+
+          foodsCopy.push(foods[i]);
+        }
+
+        return foodsCopy;
+      }
+
+      console.log(removeEgg(array1));
+    </script>
+  </body>
+</html>
