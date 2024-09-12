@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>search find index</title>
+  </head>
+  <body>
+
+    <h1>find index and unique one</h1>
+    <script>
+
+      let array1 = ["hello", "world", "goodbye", "yes", "yes", "search", "search"];
+
+      function findIndex(array, word) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === word) {
+            return i;
+          }
+        }
+
+        return -1;
+      }
+
+      function unique(array) {
+        let uniqueArray = [];
+        let length = array.length;
+
+        for (let i = 0; i < length; i++) {
+          if (!uniqueArray.includes(array[i])) {
+            uniqueArray.push(array[i]);
+          }
+        }
+
+        return uniqueArray;
+      } 
+
+      console.log(findIndex(array1, "let's go"));
+      console.log(unique(array1));
+        
+    </script>
+  </body>
+</html>
