@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>display added</title>
+  </head>
+  <body>
+    <button class="js-add-to-cart-button">Add to Cart</button>
+    <p class="js-added-message"></p>
+    <script>
+      const addToCartButton = document.querySelector(".js-add-to-cart-button");
+      const addedMessage = document.querySelector(".js-added-message");
+
+      function addToCartButtonClick() {
+        addedMessage.innerHTML = "Added";
+        setTimeout(() => addedMessage.innerHTML = "" , 2000)}
+
+      addToCartButton.addEventListener("click", addToCartButtonClick);
+    </script>
+  </body>
+</html>

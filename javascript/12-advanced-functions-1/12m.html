@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>add by number</title>
+  </head>
+  <body>
+
+    <script>
+
+      function addNum(array, num) {
+        array.forEach((value, index) => {
+          array[index] += num
+        })
+        return array;
+      }
+
+      let array = [1, 2, 3];
+      console.log(addNum(array, 5));
+    </script>
+  </body>
+</html>

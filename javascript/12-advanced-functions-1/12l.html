@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>positive nums</title>
+  </head>
+  <body>
+
+    <script>
+      let positiveCounter = 0;
+      // mix of numbers
+      const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, -1, -2, -3, -4, -5, -6]
+        .forEach((num, index) => {
+          if (num > 0) {
+            positiveCounter++;
+          }
+        })
+
+        console.log(`Positive numbers: ${positiveCounter}`); // Outputs => Positive numbers: 9
+
+      
+    </script>
+  </body>
+</html>

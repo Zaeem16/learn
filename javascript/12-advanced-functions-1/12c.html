@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>run in 1 second</title>
+  </head>
+  <body>
+    <button class="js-start-button">Start</button>
+    <script>
+      const startButton = document.querySelector(".js-start-button");
+
+      function startButtonClick() {
+        if (startButton.innerHTML === "Start") {
+          setTimeout(() =>  {
+            startButton.innerHTML = "Finished!";
+          }, 1000)
+        }
+      }
+
+      startButton.addEventListener("click", () => {startButtonClick()});
+    </script>
+  </body>
+</html>

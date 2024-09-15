@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>remove first 2 egg</title>
+  </head>
+  <body>
+
+    <script>
+      function removeEgg(foods) {
+        let counter = 2;
+  
+        return foods.filter(food => {
+          if (food === "egg" && counter > 0) {
+            counter--;
+            return false;
+          }
+
+        return true;
+        });
+      }
+
+      let array1 = ["hello", "egg", "egg", "hello", "egg"];
+      console.log(removeEgg(array1));
+    </script>
+  </body>
+</html>

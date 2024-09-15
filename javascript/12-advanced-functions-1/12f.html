@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>display added even with second click</title>
+  </head>
+  <body>
+    <button class="js-add-to-cart-button">Add to Cart</button>
+    <p class="js-added-message"></p>
+    <script>
+      const addToCartButton = document.querySelector(".js-add-to-cart-button");
+      const addedMessage = document.querySelector(".js-added-message");
+      let myTimeout;
+    
+
+      function addToCartButtonClick() {
+        addedMessage.innerHTML = "Added"
+
+        clearTimeout(myTimeout);
+        myTimeout = setTimeout(() => addedMessage.innerHTML = "", 2000);
+      }
+
+      addToCartButton.addEventListener("click", addToCartButtonClick);
+    </script>
+  </body>
+</html>

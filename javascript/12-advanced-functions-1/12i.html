@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title class="title">App</title>
+  </head>
+  <body>
+    <button class="add-to-title">Add</button>
+    <button class="remove-from-title">Remove</button>
+
+    <script>
+      const title = document.querySelector(".title")
+      const addToTitleButton = document.querySelector(".add-to-title")
+      const removeFromTitleButton = document.querySelector(".remove-from-title")
+      
+
+      let isRunning = false;
+      let messages = 2;
+
+      function titleSwap() {
+        if (messages <= 0) {
+          title.innerHTML = "App";
+          messages = 0;
+        }
+        else {
+          isRunning = !isRunning;
+          if (isRunning) {
+            title.innerHTML = `(${messages}) new messages`;
+          } else {
+            title.innerHTML = "App";
+          }
+        }
+      }
+
+      function addOrRemove(action) {
+        action === "add" ? messages++ : messages--;
+      }
+
+      if (messages > 0) {
+        setInterval(titleSwap, 1000);
+      }
+      
+      addToTitleButton.addEventListener("click", () => addOrRemove("add"));
+      removeFromTitleButton.addEventListener("click", () => addOrRemove("remove"));
+    </script>
+  </body>
+</html>
