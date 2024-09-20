@@ -656,5 +656,35 @@ const products = [
         "apparel",
         "mens"
       ]
+    },
+    {
+      id: "id1",
+      image: "images/products/backpack.jpg",
+      name: "Backpack full size 21.5 liters",
+      rating: {
+        stars: 3.5,
+        count: 243,
+      },
+      priceCents: 2099,
+      keywords: [
+        "backpacks",
+        "travel",
+        "accessories"
+      ]
+    },
+    {
+      id: "id2",
+      image: "images/products/umbrella.jpg",
+      name: "Big round Umbrella",
+      rating: {
+        stars: 4.0,
+        count: 1256,
+      },
+      priceCents: 1999,
+      keywords: [
+        "Umbrella",
+        "travel",
+        "accessories"
+      ]
     }
   ];
