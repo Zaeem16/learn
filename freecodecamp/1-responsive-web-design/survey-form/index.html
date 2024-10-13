@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soccer Application</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -9,41 +11,43 @@
     <h1 id="title">Soccer Application</h1>
     <p id="description">Please fill out this form to apply for our soccer team</p>
     <form id="survey-form">
-      <label id="name-label">Your name
-        <input type="text" id="name" placeholder="Name" required>
-      </label>
-      
-      <label id="email-label">Your email
-        <input type="email" id="email" required placeholder="Email">
-      </label>
-      
-      <label id="number-label">Your age
-        <input type="number" id="number" min="10" max="40" placeholder="Age" required>
-      </label>
+
+      <label id="name-label"><span>Name</span>
+        <input type="text" class="name top-input" placeholder="Enter your name" required>
+    </label>
+    
+    <label id="email-label"><span>Email</span>
+        <input type="email" class="email top-input" required placeholder="Enter your email">
+    </label>
+    
+    <label id="number-label"><span>Age</span>
+        <input type="number" class="number top-input" min="10" max="40" placeholder="Enter your age" required>
+    </label>
+    
 
       <div class="dropdown-container">
-        <label for="dropdown">Your motivation:</label>
-          <select id="dropdown" required>
-            <option disabled selected>(Select one)</option>
-            <option>I'm motivated by great soccer players</option>
-            <option>I love soccer</option>
-            <option>I like to pursue some career in sport like soccer</option>
-          </select>
+        <label for="dropdown"><span>Your motivation</span></label>
+        <select id="dropdown" required>
+          <option disabled selected>(Select one)</option>
+          <option>I'm motivated by great soccer players</option>
+          <option>I love soccer</option>
+          <option>I like to pursue some career in sport like soccer</option>
+        </select>
       </div>
      
       
       
 
       <div class="recommend-friend">
-        <label>Would you recommend this club to your friends?
+        <label><span class="recommend-label">Would you recommend this club to your friends?</span>
           <div class="yes-container">
             <input type="radio" id="yes" name="recommend" value="yes">
-            <label for="yes">Yes</label>
+            <label for="yes" class="one-way">Yes</label>
           </div>
           
           <div class="no-container">
             <input type="radio" id="no" name="recommend" value="no">
-            <label for="no">No</label>
+            <label for="no" class="one-way">No</label>
           </div>
           
         </label>
@@ -51,19 +55,19 @@
 
       <div class="comments-container">
         <label for="comments">Any Comments or Suggestions</label>
-        <textarea name="comments" rows="3" cols="50" placeholder="comments"></textarea>
+        <textarea name="comments" rows="3" cols="50" placeholder="Enter your comments here..."></textarea>
       </div>
       
 
       <div class="terms-and-services">
         <div class="terms-container">
           <input type="checkbox" id="agree-to-terms" value="agreed-to-terms" required>
-          <label for="agree-to-terms">I agree to the <a href="#">Terms of Services</a></label>
+          <label class="one-way" for="agree-to-terms">I agree to the <a href="#">Terms of Services</a></label>
         </div>
 
         <div class="protocols-container">
           <input type="checkbox" id="not-agree-to-terms" value="agreed-to-rules" required>
-          <label for="not-agree-to-terms">I agree to the <a href="#">rules and protocols</a></label>
+          <label class="one-way" for="not-agree-to-terms">I agree to the <a href="#">rules and protocols</a></label>
         </div>
       </div>
 
