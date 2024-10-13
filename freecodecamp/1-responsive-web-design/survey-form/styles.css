@@ -1,0 +1,115 @@
+/* Apply background image to the whole page */
+body {
+  background-image: url('image.png'); /* Replace with the correct path to your image */
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the image fixed when scrolling */
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, sans-serif; /* Optional: Set a clean font */
+  }
+  
+/* Optional: Style container for better appearance */
+.container {
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(42, 140, 42, 0.313);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+}  
+
+#title, p {
+    margin: 0;
+}
+
+#title {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(32, 133, 32, 0.697);
+  width: 40%;
+  border-radius: 10px;
+  margin: 20px auto; /* Adds space around the form */
+}
+
+
+  input, label {
+    width: 80%;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  input {
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .dropdown-container {
+    display: block;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  label[for="dropdown"] {
+    margin-bottom: 0; /* Removes the default bottom margin */
+  }
+  #dropdown{
+    width: 83%;
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+  }
+
+  .recommend-friend {
+    width: 80%;
+  }
+
+  .recommend-friend * {
+    display: inline-block;
+    margin: 0;
+    width: unset;
+  }
+
+  .yes-container, .no-container {
+    display: block;
+    margin: 5px auto;
+  }
+
+  .terms-and-services {
+    margin: 20px 0;
+    width: 80%;
+  }
+
+  .terms-and-services * {
+    display: inline-block;
+    margin: 0;
+    width: unset;
+  }
+
+  .terms-container, .protocols-container {
+    display: block;
+    margin: 5px auto;
+  }
+
+  .comments-container {
+    margin: 20px 0;
+    width: 80%;
+    padding: 10px;
+  }
+  textarea[name="comments"] {
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+  }

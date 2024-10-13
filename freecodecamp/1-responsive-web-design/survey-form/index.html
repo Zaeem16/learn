@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soccer Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Soccer Application</h1>
+    <p id="description">Please fill out this form to apply for our soccer team</p>
+    <form id="survey-form">
+      <label id="name-label">Your name
+        <input type="text" id="name" placeholder="Name" required>
+      </label>
+      
+      <label id="email-label">Your email
+        <input type="email" id="email" required placeholder="Email">
+      </label>
+      
+      <label id="number-label">Your age
+        <input type="number" id="number" min="10" max="40" placeholder="Age" required>
+      </label>
+
+      <div class="dropdown-container">
+        <label for="dropdown">Your motivation:</label>
+          <select id="dropdown" required>
+            <option disabled selected>(Select one)</option>
+            <option>I'm motivated by great soccer players</option>
+            <option>I love soccer</option>
+            <option>I like to pursue some career in sport like soccer</option>
+          </select>
+      </div>
+     
+      
+      
+
+      <div class="recommend-friend">
+        <label>Would you recommend this club to your friends?
+          <div class="yes-container">
+            <input type="radio" id="yes" name="recommend" value="yes">
+            <label for="yes">Yes</label>
+          </div>
+          
+          <div class="no-container">
+            <input type="radio" id="no" name="recommend" value="no">
+            <label for="no">No</label>
+          </div>
+          
+        </label>
+      </div>
+
+      <div class="comments-container">
+        <label for="comments">Any Comments or Suggestions</label>
+        <textarea name="comments" rows="3" cols="50" placeholder="comments"></textarea>
+      </div>
+      
+
+      <div class="terms-and-services">
+        <div class="terms-container">
+          <input type="checkbox" id="agree-to-terms" value="agreed-to-terms" required>
+          <label for="agree-to-terms">I agree to the <a href="#">Terms of Services</a></label>
+        </div>
+
+        <div class="protocols-container">
+          <input type="checkbox" id="not-agree-to-terms" value="agreed-to-rules" required>
+          <label for="not-agree-to-terms">I agree to the <a href="#">rules and protocols</a></label>
+        </div>
+      </div>
+
+      <button type="submit" id="submit">Submit</button>
+
+    </form>
+  </div>
+</body>
+</html>
