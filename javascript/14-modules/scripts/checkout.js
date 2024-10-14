@@ -1,4 +1,4 @@
-import {cart, removeFromCart, updateCartQuantity} from '../data/cart.js';
+import {cart, removeFromCart, updateCartQuantity, updateQuantity} from '../data/cart.js';
 import {products} from '../data/products.js';
 import {formatCurrency} from './utils/money.js';
 
@@ -132,7 +132,10 @@ document.querySelectorAll('.js-save-link')
       const productId = link.dataset.productId;
       const quantityInputElement = document.querySelector(`.quantity-input`);
       const quantity = parseInt(quantityInputElement.value);
+
       document.querySelector(`.js-cart-item-container-${productId}`)
         .classList.remove('is-editing-quantity');
+
+        updateQuantity(productId, quantity);
     })
   })
