@@ -2,8 +2,19 @@ import {cart, removeFromCart} from '../data/cart.js';
 import {products} from '../data/products.js';
 import {formatCurrency} from './utils/money.js';
 
+updateHeaderQuantity();
 let cartSummaryHTML = '';
 
+function updateHeaderQuantity() {
+  let headerQuantity = 0;
+
+  cart.forEach((cartItem) => {
+    headerQuantity += cartItem.quantity;
+  });
+
+  document.querySelector('.js-header-quantity')
+    .innerHTML = headerQuantity;
+}
 cart.forEach((cartItem) => {
   const productId = cartItem.productId;
 
