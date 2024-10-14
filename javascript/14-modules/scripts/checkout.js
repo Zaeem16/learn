@@ -130,6 +130,8 @@ document.querySelectorAll('.js-save-link')
   .forEach((link) => {
     link.addEventListener('click', () => {
       const productId = link.dataset.productId;
+      const quantityInputElement = document.querySelector(`.quantity-input`);
+      const quantity = parseInt(quantityInputElement.value);
       document.querySelector(`.js-cart-item-container-${productId}`)
         .classList.remove('is-editing-quantity');
     })
