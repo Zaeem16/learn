@@ -7,7 +7,7 @@
     "checkmark",
     "Zaeem"
 ],
-"liveServer.settings.port": 5501,
+"liveServer.settings.port": 5503,
 
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[javascript]": {
