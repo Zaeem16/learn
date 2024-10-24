@@ -16,9 +16,15 @@ modes = ["Easy", "Medium", "Hard", "Impossible"]
 quit = "Q"
 
 #opening the json file so to have access to all countries and hints
-with open("all_countries.json", "r") as jf:
-    my_countries = json.load(jf)
-
+try:
+    with open("/workspaces/zaeem/cs50/cs50p/project/all-countries.json", "r") as jf:
+        my_countries = json.load(jf)
+except FileNotFoundError:
+    print("The file 'all-countries.json' was not found. Please ensure it is in the correct directory.")
+    sys.exit(1)
+except json.JSONDecodeError:
+    print("Error in decoding JSON. Please check the file format.")
+    sys.exit(1)
 
 #handling all the logic of this program by main
 def main():
