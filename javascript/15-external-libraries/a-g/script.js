@@ -1,4 +1,5 @@
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+import isSatSun from "./date-functions.js"
 const today = dayjs();
 
 /* 15a */
@@ -18,17 +19,14 @@ const todayDayName = today.format("dddd");
 console.log(todayDayName);
 
 /* 15e */ 
-function isWeekend(date) {
-    const day = dayjs(date).day(); // Get the day of the week (0 = Sunday, 6 = Saturday)
-    if (day === 0) {
-        return "Sunday";
-    }
-    else if (day === 6) {
-        return "Saturday";
-    }
-    else {
-        return "Weekday";
-    }
-}
+/* moved the isWeekend to the date-functions.js file in 15f*/
+console.log(isSatSun(today));
 
-console.log(isWeekend(today));
+/* 15f */
+/* default export isWeekend from the date-functions.js file */
+
+
+/* 15g */
+/* default export isWeekend as isSanSun from the date-functions.js file */
+
+
