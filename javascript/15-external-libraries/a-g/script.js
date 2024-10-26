@@ -12,3 +12,5 @@ console.log(after1month.format("MMMM D"));
 const before1month = today.subtract(1, "months");
 console.log(before1month.format("MMMM D"));
 
+/* 15d */ 
+console.log(today.format("dddd"));
