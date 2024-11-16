@@ -27,6 +27,6 @@ console.log(isSatSun(today));
 
 
 /* 15g */
-/* default export isWeekend as isSanSun from the date-functions.js file */
+/* default export isWeekend as isSatSun from the date-functions.js file */
 
 
